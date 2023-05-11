@@ -6,6 +6,9 @@ import 'package:jogomemori/widgets/logo.dart';
 import 'package:jogomemori/widgets/records.dart';
 import 'package:jogomemori/widgets/startbutton.dart';
 
+import '../consts/constants.dart';
+import 'niveispage.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -26,9 +29,21 @@ class _HomePageState extends State<HomePage> {
           children: [
             const Logo(),
             StartButton(
-                title: 'Modo Normal', color: Colors.white, action: () {}),
+                title: 'Modo Normal',
+                color: Colors.white,
+                action: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            const NivelPage(modo: Modo.normal)))),
             StartButton(
-                title: 'Modo Round 6', color: Round6Theme.color, action: () {}),
+                title: 'Modo Round 6',
+                color: Round6Theme.color,
+                action: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            const NivelPage(modo: Modo.round6)))),
             SizedBox(
               height: 60,
             ),
