@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:jogomemori/colors/theme.dart';
 import 'package:jogomemori/widgets/logo.dart';
+import 'package:jogomemori/widgets/startbutton.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -22,6 +24,10 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Logo(),
+            StartButton(
+                title: 'Modo Normal', color: Colors.white, action: () {}),
+            StartButton(
+                title: 'Modo Round 6', color: Round6Theme.color, action: () {}),
           ],
         ),
       ),
