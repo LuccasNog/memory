@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:jogomemori/colors/theme.dart';
 import 'package:jogomemori/widgets/logo.dart';
+import 'package:jogomemori/widgets/records.dart';
 import 'package:jogomemori/widgets/startbutton.dart';
 
 class HomePage extends StatefulWidget {
@@ -28,6 +29,10 @@ class _HomePageState extends State<HomePage> {
                 title: 'Modo Normal', color: Colors.white, action: () {}),
             StartButton(
                 title: 'Modo Round 6', color: Round6Theme.color, action: () {}),
+            SizedBox(
+              height: 60,
+            ),
+            const Recordes(),
           ],
         ),
       ),
